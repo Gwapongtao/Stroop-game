@@ -1,0 +1,2 @@
+# Stroop-game
+Embedded project
