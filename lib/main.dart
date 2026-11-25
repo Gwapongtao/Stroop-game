@@ -40,7 +40,7 @@ const Map<String, Color> kInk = {
   'red': Color(0xFFE2483D),
   'blue': Color(0xFF2F6FE0),
   'green': Color(0xFF1F9E57),
-  'yellow': Color(0xFFD99A00),
+  'pink': Color(0xFFE8459B),
   'orange': Color(0xFFEE7A12),
   'purple': Color(0xFF8B3FD4),
 };
@@ -1151,7 +1151,7 @@ class _GamePageState extends State<GamePage> with WidgetsBindingObserver {
               ],
             ),
             SizedBox(height: 16 * k),
-            Text('Press START or RESTART for the main menu',
+            Text('Press START or MENU for the main menu',
                 style: TextStyle(fontSize: 18 * k, fontWeight: FontWeight.w600, color: kMuted)),
           ],
         ),
@@ -1885,9 +1885,9 @@ class TestPad extends StatelessWidget {
           gap,
           SizedBox(
               width: 84 * k,
-              child: PadButton(color: const Color(0xFF6B7280), label: 'RESTART', onDown: () => onPress('restart'))),
+              child: PadButton(color: const Color(0xFF6B7280), label: 'MENU', onDown: () => onPress('restart'))),
           SizedBox(width: 14 * k),
-          for (final id in const ['red', 'blue', 'green', 'yellow', 'orange', 'purple']) ...[
+          for (final id in const ['red', 'blue', 'green', 'pink', 'orange', 'purple']) ...[
             Expanded(child: PadButton(color: kInk[id]!, onDown: () => onPress(id))),
             if (id != 'purple') gap,
           ],
